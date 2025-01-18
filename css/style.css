@@ -1,0 +1,71 @@
+body {
+  background-color: #000000;
+  font-size: 22px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.top__menu {
+  display: flex;
+  background-color: #585043;
+  margin-top: 0;
+  list-style: none;
+  padding-left: 0;
+
+}
+
+
+a {
+  display: inline-block;
+  /* сделали а  блочним  */
+  text-decoration: none;
+  color: aliceblue;
+  padding: 15px 30px;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.submenu {
+  min-width: 200px;
+  position: absolute;
+  z-index: 5;              /* глибина елементу по оси z*/
+  transform-origin: 0 0;   /* точка вокруя якої буде відбуватись трансформація */
+  transform: rotateX(-90deg); /* поворот елементу вокруг точки Х */
+  transition: .3s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu .submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: .3s linear;   /* linear обозначает равномерную скорость на протяжении всего перехода.*/
+}
+
+.top__menu li:hover>.submenu {
+  visibility: visible;  /* видимость или не видимость  елементу*/
+  opacity: 1;    /* прозрачность елементу*/
+  transform: rotateX(0deg);
+}
+
+
+  /* стилі на випливаюче меню */
+
+.submenu a {
+  border-bottom: 1px solid #000000;
+  padding: 10px 20px;
+  background-color: #918f8f;
+  font-size: 16px;
+  display: block;
+
+
+}
