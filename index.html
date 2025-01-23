@@ -11,46 +11,48 @@
 </head>
 
 <body>
-  <nav>
-    <ul class="top__menu">
-      <li><a href="#">menu 1 level</a>
-        <ul class="submenu">
-          <li><a href="#">menu 2 level</a></li>
-          <li>
-            <a href="#">menu 2 level</a>
-            <ul class="submenu">
-              <li><a href="#">menu 3 level</a></li>
-              <li><a href="#">menu 3 level</a></li>
-              <li><a href="#">menu 3 level</a></li>
-              <li>
-                <a href="#">menu 3 level</a>
-                <ul class="submenu">
-                  <li><a href="#">menu 3 level</a></li>
-                  <li><a href="#">menu 3 level</a></li>
-                  <li><a href="#">menu 3 level</a></li>
-                  <li><a href="#">menu 3 level</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#">menu 2 level</a></li>
-          <li><a href="#">menu 2 level</a></li>
-        </ul>
-      </li>
-      <li><a href="#">menu 1 level</a></li>
-      <li><a href="#">menu 1 level</a></li>
-      <li><a href="#">menu 1 level</a>
-        <ul class="submenu">
-          <li><a href="#">menu 3 level</a></li>
-          <li><a href="#">menu 3 level</a></li>
-          <li><a href="#">menu 3 level</a></li>
-          <li><a href="#">menu 3 level</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
 
-  <script src="ic/main.js"></script>
+  <header class="header">
+    <div class="logo">
+      <span>Frontend</span>
+      <span>Case</span>
+    </div>
+
+    <nav class="nav">
+      <ul class="top__menu">
+        <li>Главная</li>
+        <li>Каталог
+          <ul class="submenu active">
+            <li><a href="#">світло фар</a></li>
+            <li><a href="#">панель</a></li>
+            <li><a href="#">задні стопи</a></li>
+            <li><a href="#">сигналізація</a>
+              <ul class="submenu">
+                <li><a href="#">світло фар</a></li>
+                <li><a href="#">панель</a></li>
+                <li><a href="#">задні стопи</a></li>
+                <li><a href="#">сигналізація</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Услуги</li>
+        <li>Галерея</li>
+        <li>Отзывы</li>
+        <li>Контакты</li>
+      </ul>
+    </nav>
+
+    <div class="burger ">
+      <span></span>
+    </div>
+  </header>
+  <section class="main">
+
+  </section>
+  
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>

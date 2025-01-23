@@ -1,40 +1,96 @@
-body {
-  background-color: #000000;
-  font-size: 22px;
-  font-family: sans-serif;
+
+* {
   margin: 0;
   padding: 0;
 }
 
-.top__menu {
+.open {
+  display: flex !important;
+}
+.header {
   display: flex;
-  background-color: #585043;
-  margin-top: 0;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  background-color: #323435;
+  color: rgb(166, 201, 223);
+  padding: 0 40px;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #aa1414;
+  width: 90px;
+  height: 90px;
+}
+
+.nav {
+  display: flex;
+  width: 700px;
+  padding: 0 40px;
+}
+
+.nav ul {
+  width: 100%;
   list-style: none;
-  padding-left: 0;
-
+  display: flex;
+  justify-content: space-between;
 }
 
-
-a {
-  display: inline-block;
-  /* сделали а  блочним  */
-  text-decoration: none;
-  color: aliceblue;
-  padding: 15px 30px;
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
 }
 
-.submenu {
-  list-style: none;
-  padding-left: 0;
+.burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #ecd3d3;
 }
 
-.submenu {
-  min-width: 200px;
+.burger::before, .burger::after{
+  content: '';
   position: absolute;
-  z-index: 5;              /* глибина елементу по оси z*/
-  transform-origin: 0 0;   /* точка вокруя якої буде відбуватись трансформація */
-  transform: rotateX(-90deg); /* поворот елементу вокруг точки Х */
+  height: 2px;
+  width: 100%;
+  background-color: #ecd3d3;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {top: 0;}
+.burger::after {bottom: 0;}
+
+ .burger.active span {transform: scale(0);} 
+ /* щоб середня полоска пропала  */
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+  position: absolute;
+  z-index: 5;             /* глибина елементу по оси z*/
+  transform-origin: 0 0;  /* точка вокруя якої буде відбуватись трансформація */
+  transform: rotateX(-90deg);/* поворот елементу вокруг точки Х  */
   transition: .3s linear;
   visibility: hidden;
   opacity: 0;
@@ -57,15 +113,62 @@ a {
   transform: rotateX(0deg);
 }
 
-
-  /* стилі на випливаюче меню */
-
 .submenu a {
-  border-bottom: 1px solid #000000;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
   padding: 10px 20px;
-  background-color: #918f8f;
+  background-color: rgba(157, 157, 157, 0.5);
+  border: 1px solid #fffffff4;
   font-size: 16px;
   display: block;
+} 
+
+.main {
+  background-color: #0dc6fff4;
+  height: 100vh;
+}
 
 
+ @media(max-width: 950px) {
+
+  .burger{
+    display: flex;
+  }
+
+    .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;bottom: 0;right: 0;left: 0;
+    z-index: 50;
+    overflow: auto;
+    padding: 50px 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: burgerAnimation 0.4s;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    row-gap: 30px;
+  } 
+}  
+
+.submenu.active {
+  gap: 0;
+  
+}
+.submenu a{
+  background-color: rgba(157, 157, 157, 1);
+  
+}
+.submenu.submenu {
+  gap: 0;
+}
+
+@keyframes burgerAnimation  {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
