@@ -1,20 +1,31 @@
-
 * {
   margin: 0;
   padding: 0;
 }
 
+
 .open {
   display: flex !important;
 }
+.container{
+
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+   
+}
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100px;
-  background-color: #323435;
-  color: rgb(166, 201, 223);
-  padding: 0 40px;
+   background-color: #323435;
+  
+}
+
+.content__title{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   min-height: 100px;
+   color: rgb(166, 201, 223);
+   padding: 0 40px;
 }
 
 .logo{
@@ -127,7 +138,85 @@
 .main {
   background-color: #0dc6fff4;
   height: 100vh;
+  padding-top: 150px;
+
+  text-align: center;
 }
+
+
+
+.but {
+   font-size: 44px;
+   padding-bottom: 20px;
+}
+
+.cont{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.input {
+  
+   width: 300px;
+   height: 50px;
+   border-radius: 20px;
+   border: none;
+   padding-left: 15px;
+   margin-right: 10px;
+}
+
+
+.button{
+   position: relative;
+   cursor: pointer;
+}
+
+.ripple{
+   width: 50px;
+   height: 50px;
+   
+}
+
+.ripple div {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 6px solid rgb(8, 15, 204);
+   animation: ripple 1s cubic-bezier(.03, .54, .6, .63) infinite;
+   border-radius: 50%;
+   
+}
+
+
+.ripple div:nth-child(2 ){
+   animation-delay: 0.5s;
+}
+
+@keyframes ripple{
+   0%{
+      width: 0;
+      height: 0; 
+      opacity: 0;
+   }
+   5%{
+      width: 0;
+      height: 0; 
+      opacity: 0;
+   }5.1%{
+      width: 0;
+      height: 0; 
+      opacity: 1;
+   }100%{
+      width: 30px;
+      height: 30px; 
+      opacity: 0;
+   }
+}
+
+
+
 
 
  @media(max-width: 950px) {
@@ -172,3 +261,4 @@
   from{opacity: 0;}
   to{opacity: 1;}
 }
+

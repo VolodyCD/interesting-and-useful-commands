@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compalible" content="ie=edge" />
+    <title>Menu adaptiv</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compalible" content="ie=edge">
-  <title>Menu adaptiv</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="content__title">
+          <div class="logo">
+            <span>Frontend</span>
+            <span>Case</span>
+          </div>
 
-<body>
+          <nav class="nav">
+            <ul class="top__menu">
+              <li>Главная</li>
+              <li>
+                Каталог
+                <ul class="submenu active">
+                  <li><a href="#">світло фар</a></li>
+                  <li><a href="#">панель</a></li>
+                  <li><a href="#">задні стопи</a></li>
+                  <li>
+                    <a href="#">сигналізація</a>
+                    <ul class="submenu">
+                      <li><a href="#">світло фар</a></li>
+                      <li><a href="#">панель</a></li>
+                      <li><a href="#">задні стопи</a></li>
+                      <li><a href="#">сигналізація</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Услуги</li>
+              <li>Галерея</li>
+              <li>Отзывы</li>
+              <li>Контакты</li>
+            </ul>
+          </nav>
 
-  <header class="header">
-    <div class="logo">
-      <span>Frontend</span>
-      <span>Case</span>
-    </div>
+          <div class="burger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container">
+        <h1 class="but">Button</h1>
+        <div class="cont">
+          <input type="text" class="input" placeholder=" Заповни мене! " />
+          <a href="" class="button">
+            <div class="ripple">
+              <div class=""></div>
+              <div class=""></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <nav class="nav">
-      <ul class="top__menu">
-        <li>Главная</li>
-        <li>Каталог
-          <ul class="submenu active">
-            <li><a href="#">світло фар</a></li>
-            <li><a href="#">панель</a></li>
-            <li><a href="#">задні стопи</a></li>
-            <li><a href="#">сигналізація</a>
-              <ul class="submenu">
-                <li><a href="#">світло фар</a></li>
-                <li><a href="#">панель</a></li>
-                <li><a href="#">задні стопи</a></li>
-                <li><a href="#">сигналізація</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>Услуги</li>
-        <li>Галерея</li>
-        <li>Отзывы</li>
-        <li>Контакты</li>
-      </ul>
-    </nav>
-
-    <div class="burger ">
-      <span></span>
-    </div>
-  </header>
-  <section class="main">
-
-  </section>
-  
-
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
